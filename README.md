@@ -59,6 +59,8 @@ repository.
 
 `ward lint`, `ward typecheck`, `ward test`, `ward audit`, and `ward precommit`
 are the supported validation verbs. A main-branch workflow tests and publishes
-an immutable image tagged with that commit SHA.
+the private image
+`forgejo.coilysiren.me/coilyco-flight-deck/bluesky-mcp:<full-source-sha>`.
+Deployment uses a separate read-only `forgejo-registry` pull credential.
 
 See [AGENTS.md](AGENTS.md) and [docs/FEATURES.md](docs/FEATURES.md).

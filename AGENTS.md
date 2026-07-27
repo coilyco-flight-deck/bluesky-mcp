@@ -31,3 +31,11 @@ details in tracked files or logs.
 
 Run `ward lint`, `ward typecheck`, `ward test`, `ward audit`, and `ward
 precommit` before landing source changes.
+
+## Release
+
+After validation, main CI publishes the private image
+`forgejo.coilysiren.me/coilyco-flight-deck/bluesky-mcp:<full-source-sha>`
+through the trusted deploy lane. The runner supplies `REGISTRY_TOKEN` for
+package writes. `coilyco-bridge/deploy` owns the separate read-only
+`forgejo-registry` pull credential and rollout.

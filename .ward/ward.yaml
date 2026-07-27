@@ -21,6 +21,9 @@ commands:
   build-docker:
     run: make build-docker
     description: Build the non-root bluesky-mcp image locally.
+  image-publish-check:
+    run: bash -n scripts/publish-image.sh
+    description: Parse the trusted Forgejo OCI publisher shell contract.
   run:
     run: make run
     description: Run the streamable HTTP MCP locally.

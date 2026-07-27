@@ -12,5 +12,7 @@ with an app password, and exposes exactly these 11 bounded read tools:
 
 The service excludes write actions, generic network/XRPC access, record tools,
 and session tools. Credential-shaped values are removed from all tool results.
-The source repository publishes its non-root image; deployment policy and
+After validation, trusted main CI publishes one private non-root image as
+`forgejo.coilysiren.me/coilyco-flight-deck/bluesky-mcp:<full-source-sha>` and
+proves its remote manifest. Deployment policy, read-only pull credentials, and
 secret mapping are owned separately.
