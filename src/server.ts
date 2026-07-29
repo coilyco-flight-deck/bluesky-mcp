@@ -5,6 +5,8 @@ import express from "express";
 import { fileURLToPath } from "node:url";
 import { z } from "zod";
 
+import { SERVICE_ICON } from "./icon.js";
+
 const SERVICE_NAME = "bluesky-mcp";
 const SERVICE_VERSION = "1.0.0";
 const ENTRYWAY_URL = "https://bsky.social";
@@ -88,7 +90,12 @@ const query = z.string().trim().min(1).max(300);
 const page = (defaultValue: number, maximum = 50) => z.number().int().min(1).max(maximum).default(defaultValue);
 
 export function createMcpServer(client = bluesky): McpServer {
-  const server = new McpServer({ name: SERVICE_NAME, version: SERVICE_VERSION });
+  const server = new McpServer({
+    name: SERVICE_NAME,
+    version: SERVICE_VERSION,
+    websiteUrl: "https://bluesky.coilysiren.me",
+    icons: [SERVICE_ICON],
+  });
   const registeredTools: string[] = [];
   const read = (name: string, description: string, inputSchema: Record<string, z.ZodType>, handler: (input: any) => Promise<unknown>) => {
     registeredTools.push(name);
