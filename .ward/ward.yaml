@@ -1,31 +1,31 @@
 # Source-repository command allowlist. Deployment verbs belong in deploy.
 commands:
   install:
-    run: make install
+    run: npm ci
     description: Install the pinned dependencies.
   test:
-    run: make test
+    run: npm test
     description: Build TypeScript and run the unit and inventory tests.
   lint:
-    run: make lint
+    run: npm run lint
     description: Lint TypeScript source and tests.
   typecheck:
-    run: make typecheck
+    run: npm run typecheck
     description: Type-check TypeScript source and tests.
   audit:
-    run: make audit
+    run: npm run audit
     description: Audit production dependencies for high-severity vulnerabilities.
   precommit:
-    run: make precommit
+    run: pre-commit run --all-files
     description: Run every repository pre-commit hook.
   build-docker:
-    run: make build-docker
+    run: docker build -t bluesky-mcp:local .
     description: Build the non-root bluesky-mcp image locally.
   image-publish-check:
     run: bash -n scripts/publish-image.sh
     description: Parse the trusted Forgejo OCI publisher shell contract.
   run:
-    run: make run
+    run: npm start
     description: Run the streamable HTTP MCP locally.
 
 catalog:
