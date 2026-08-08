@@ -28,6 +28,9 @@ commands:
     run: npm start
     description: Run the streamable HTTP MCP locally.
 
+agent:
+  workflow: merge-remote-main
+
 catalog:
   kind: Component
   type: service
