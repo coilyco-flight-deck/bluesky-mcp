@@ -39,3 +39,12 @@ After validation, main CI publishes the private image
 through the trusted deploy lane. The runner supplies `REGISTRY_TOKEN` for
 package writes. `coilyco-bridge/deploy` owns the separate read-only
 `forgejo-registry` pull credential and rollout.
+
+## Checkout residency
+
+This repo is not in Agent Compose's `repository-plan.yaml`, so it has no
+resident checkout under `~/projects/<owner>/`. That is intentional. Work it
+from a task-scoped temporary clone, and remove that clone once the work lands.
+
+A temporary root can be purged at any time, so commit and push before pausing,
+switching tasks, or ending a session. The remote is the only durable artifact.
