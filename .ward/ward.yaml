@@ -1,32 +1,9 @@
-# Source-repository command allowlist. Deployment verbs belong in deploy.
-commands:
-  install:
-    run: npm ci
-    description: Install the pinned dependencies.
-  test:
-    run: npm test
-    description: Build TypeScript and run the unit and inventory tests.
-  lint:
-    run: npm run lint
-    description: Lint TypeScript source and tests.
-  typecheck:
-    run: npm run typecheck
-    description: Type-check TypeScript source and tests.
-  audit:
-    run: npm run audit
-    description: Audit production dependencies for high-severity vulnerabilities.
-  precommit:
-    run: pre-commit run --all-files
-    description: Run every repository pre-commit hook.
-  build-docker:
-    run: docker build -t bluesky-mcp:local .
-    description: Build the non-root bluesky-mcp image locally.
-  image-publish-check:
-    run: bash -n scripts/publish-image.sh
-    description: Parse the trusted Forgejo OCI publisher shell contract.
-  run:
-    run: npm start
-    description: Run the streamable HTTP MCP locally.
+# Catalog metadata for the cross-repo knowledge graph.
+#
+# Dev verbs used to live here as a `commands:` block. They are recipes in the
+# justfile now. This file survives only because check_catalog_block pins this
+# exact path and catalog-trifecta wants README, AGENTS, and FEATURES to link
+# it, both upstream in agentic-os.
 
 catalog:
   description: "Authenticated, strictly read-only Bluesky MCP with a fixed 11-tool inventory."

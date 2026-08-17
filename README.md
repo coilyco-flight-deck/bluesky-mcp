@@ -19,8 +19,8 @@ Defaults are `HOST=0.0.0.0` and `PORT=9113`. Set these runtime variables:
 Run locally with an app password supplied out of band:
 
 ```sh
-ward install
-BSKY_APP_PASSWORD=... ward run
+just install
+BSKY_APP_PASSWORD=... just run
 ```
 
 ## Exact tool inventory
@@ -57,7 +57,7 @@ repository.
 
 ## Development
 
-`ward lint`, `ward typecheck`, `ward test`, `ward audit`, and `ward precommit`
+`just lint`, `just typecheck`, `just test`, `ward audit`, and `just precommit`
 are the supported validation verbs. A main-branch workflow tests and publishes
 the private image
 `forgejo.coilysiren.me/coilyco-flight-deck/bluesky-mcp:<full-source-sha>`.
@@ -67,4 +67,5 @@ Deployment uses a separate read-only `forgejo-registry` pull credential.
 
 - [AGENTS.md](AGENTS.md) - agent operating rules for this repository.
 - [docs/FEATURES.md](docs/FEATURES.md) - inventory of what ships today.
-- [.ward/ward.yaml](.ward/ward.yaml) - allowlisted commands.
+- [justfile](justfile) - dev verbs.
+- [.ward/ward.yaml](.ward/ward.yaml) - catalog metadata only.

@@ -10,10 +10,10 @@ jobs:
     container: forgejo.coilysiren.me/coilyco-flight-deck/agentic-os:release
     steps:
       - uses: actions/checkout@v4
-      - run: ward install
-      - run: ward lint
-      - run: ward typecheck
-      - run: ward test
+      - run: just install
+      - run: just lint
+      - run: just typecheck
+      - run: just test
       - run: ward audit
       - name: Alert Telegram on main failure
         if: ${{ failure() && github.ref == 'refs/heads/main' }}

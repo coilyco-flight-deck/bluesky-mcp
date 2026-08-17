@@ -39,7 +39,7 @@ details in tracked files or logs.
 
 ## Validation
 
-Run `ward lint`, `ward typecheck`, `ward test`, `ward audit`, and `ward
+Run `just lint`, `just typecheck`, `just test`, `ward audit`, and `ward
 precommit` before landing source changes.
 
 ## Cross-repo contracts
@@ -74,4 +74,5 @@ switching tasks, or ending a session. The remote is the only durable artifact.
 
 - [README.md](README.md) - human-facing intro.
 - [docs/FEATURES.md](docs/FEATURES.md) - inventory of what ships today.
-- [.ward/ward.yaml](.ward/ward.yaml) - allowlisted commands.
+- [justfile](justfile) - dev verbs.
+- [.ward/ward.yaml](.ward/ward.yaml) - catalog metadata only.

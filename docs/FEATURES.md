@@ -21,4 +21,5 @@ secret mapping are owned separately.
 
 - [README.md](../README.md) - human-facing intro.
 - [AGENTS.md](../AGENTS.md) - agent operating rules.
-- [.ward/ward.yaml](../.ward/ward.yaml) - allowlisted commands.
+- [justfile](../justfile) - dev verbs.
+- [.ward/ward.yaml](../.ward/ward.yaml) - catalog metadata only.
