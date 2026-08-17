@@ -63,4 +63,8 @@ the private image
 `forgejo.coilysiren.me/coilyco-flight-deck/bluesky-mcp:<full-source-sha>`.
 Deployment uses a separate read-only `forgejo-registry` pull credential.
 
-See [AGENTS.md](AGENTS.md) and [docs/FEATURES.md](docs/FEATURES.md).
+## See also
+
+- [AGENTS.md](AGENTS.md) - agent operating rules for this repository.
+- [docs/FEATURES.md](docs/FEATURES.md) - inventory of what ships today.
+- [.ward/ward.yaml](.ward/ward.yaml) - allowlisted commands.

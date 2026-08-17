@@ -11,6 +11,12 @@ Bluesky reads over streamable HTTP. It is intentionally a finite, read-only
 adapter. There is no frontend, database, generic network proxy, or mutation
 surface.
 
+## Project shape
+
+The MCP server is TypeScript under `src/`, built to `dist/`. `src/icon.ts`
+carries the service icon, and `scripts/` holds the shell and Python that CI
+steps invoke on one line.
+
 ## Repo boundaries
 
 This repository owns source, tests, image construction, and image publishing.
@@ -36,6 +42,17 @@ details in tracked files or logs.
 Run `ward lint`, `ward typecheck`, `ward test`, `ward audit`, and `ward
 precommit` before landing source changes.
 
+## Cross-repo contracts
+
+The catalog pre-commit hooks are authored in agentic-os and consumed here by
+upstream rev, never forked. Deployment policy, pull credentials, and secret
+mapping are owned by deploy, not here.
+
+## Agent rules
+
+Use she/her for Kai. No em dashes, italics, or semicolons in prose. Name the
+actor in every action sentence.
+
 ## Release
 
 After validation, main CI publishes the private image
@@ -52,3 +69,9 @@ from a task-scoped temporary clone, and remove that clone once the work lands.
 
 A temporary root can be purged at any time, so commit and push before pausing,
 switching tasks, or ending a session. The remote is the only durable artifact.
+
+## See also
+
+- [README.md](README.md) - human-facing intro.
+- [docs/FEATURES.md](docs/FEATURES.md) - inventory of what ships today.
+- [.ward/ward.yaml](.ward/ward.yaml) - allowlisted commands.

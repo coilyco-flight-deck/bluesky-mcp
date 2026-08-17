@@ -1,2 +1,10 @@
 [tool.agentic-os.repo-pointer-skills]
 org = "coilyco-flight-deck"
+
+[tool.agentic-os.documentation-layout]
+band = "small"
+
+# The managed markers are stamped inside the pre-commit YAML and
+# cannot form a single top-of-file comment block.
+[tool.agentic-os.code-comments]
+excludes = [".pre-commit-config.yaml"]

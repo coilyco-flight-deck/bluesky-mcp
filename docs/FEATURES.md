@@ -16,3 +16,9 @@ After validation, trusted main CI publishes one private non-root image as
 `forgejo.coilysiren.me/coilyco-flight-deck/bluesky-mcp:<full-source-sha>` and
 proves its remote manifest. Deployment policy, read-only pull credentials, and
 secret mapping are owned separately.
+
+## See also
+
+- [README.md](../README.md) - human-facing intro.
+- [AGENTS.md](../AGENTS.md) - agent operating rules.
+- [.ward/ward.yaml](../.ward/ward.yaml) - allowlisted commands.
