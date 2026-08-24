@@ -57,7 +57,7 @@ repository.
 
 ## Development
 
-`just lint`, `just typecheck`, `just test`, `ward audit`, and `just precommit`
+`just lint`, `just typecheck`, `just test`, `just audit`, and `just precommit`
 are the supported validation verbs. A main-branch workflow tests and publishes
 the private image
 `forgejo.coilysiren.me/coilyco-flight-deck/bluesky-mcp:<full-source-sha>`.
