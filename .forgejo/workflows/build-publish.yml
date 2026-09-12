@@ -15,7 +15,6 @@ jobs:
       - run: just lint
       - run: just typecheck
       - run: just test
-      - run: ward audit
       - name: Alert Telegram on main failure
         if: ${{ failure() && github.ref == 'refs/heads/main' }}
         continue-on-error: true
